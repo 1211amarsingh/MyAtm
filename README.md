@@ -9,5 +9,5 @@ Cash withdrawl application
 
 ## Output
 
-![](https://github.com/1211amarsingh/MyAtm/doc/blob/master/Screenshot1.jpg)
-![](https://github.com/1211amarsingh/MyAtm/doc/blob/master/Screenshot2.jpg)
+![](https://github.com/1211amarsingh/MyAtm/blob/maste/doc/blob/master/Screenshot1.jpg)
+![](https://github.com/1211amarsingh/MyAtm/blob/maste/doc/blob/master/Screenshot2.jpg)
