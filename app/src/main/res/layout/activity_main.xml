@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.kv.atmapplication.ui.main.MainViewModel" />
@@ -28,16 +29,16 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:paddingVertical="@dimen/_10sdp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_10sdp">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/label_atm_amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/atm_amount"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/label_rs_100"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +49,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:textColor="@color/semi_black"
                     android:text="@{@string/rs+viewModel.atmBalance.amount}"
+                    android:textColor="@color/semi_black"
                     app:layout_constraintEnd_toEndOf="@id/label_atm_amount"
                     app:layout_constraintStart_toStartOf="@id/label_atm_amount"
                     app:layout_constraintTop_toBottomOf="@id/label_atm_amount"
@@ -60,8 +61,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rs_100"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/label_rs_200"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/label_atm_amount"
@@ -98,10 +99,10 @@
                     android:id="@+id/tv_rs_200"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/semi_black"
                     android:layout_marginTop="@dimen/_5sdp"
-
                     android:text="@{viewModel.atmBalance.get200Text()}"
+
+                    android:textColor="@color/semi_black"
 
                     app:layout_constraintEnd_toEndOf="@id/label_rs_200"
                     app:layout_constraintStart_toStartOf="@id/label_rs_200"
@@ -157,9 +158,9 @@
                     android:layout_marginTop="@dimen/_5sdp"
 
                     android:text="@{viewModel.atmBalance.get2000Text()}"
-                    app:layout_constraintEnd_toEndOf="@id/label_rs_2000"
-
                     android:textColor="@color/semi_black"
+
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_2000"
                     app:layout_constraintStart_toStartOf="@id/label_rs_2000"
                     app:layout_constraintTop_toBottomOf="@id/label_rs_2000"
                     tools:text="10" />
