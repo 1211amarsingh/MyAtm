@@ -2,6 +2,7 @@ package com.kv.atmapplication.ui.add_money
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -25,8 +26,10 @@ class AddMoneyActivity : AppCompatActivity() {
         binding.lifecycleOwner = this;
         binding.viewModel = viewModel;
 
-        viewModel.atmBalance.observe(this, {
-        })
+        binding.tietRs100.setInputType(InputType.TYPE_CLASS_NUMBER);
+        binding.tietRs200.setInputType(InputType.TYPE_CLASS_NUMBER);
+        binding.tietRs500.setInputType(InputType.TYPE_CLASS_NUMBER);
+        binding.tietRs2000.setInputType(InputType.TYPE_CLASS_NUMBER);
     }
 
     fun onClickDepositAtm(view: View) {

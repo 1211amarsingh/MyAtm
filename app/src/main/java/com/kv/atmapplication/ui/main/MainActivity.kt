@@ -1,6 +1,7 @@
 package com.kv.atmapplication.ui.main
 
 import android.os.Bundle
+import android.text.InputType
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             if (!TextUtils.isEmpty(it))
                 Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
         })
+        binding.tietAmount.setInputType(InputType.TYPE_CLASS_NUMBER);
     }
 
     fun onClickWithdrawl(view: View) {

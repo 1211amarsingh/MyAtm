@@ -175,6 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:inputType="number"
+                    android:digits="0123456789"
                     android:maxLength="6"
                     android:text="@={viewModel.rs_100}"
                     android:textAlignment="center"
@@ -190,6 +191,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:digits="0123456789"
                     android:inputType="number"
                     android:maxLength="6"
                     android:text="@={viewModel.rs_200}"
@@ -206,6 +208,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:digits="0123456789"
                     android:inputType="number"
                     android:maxLength="6"
                     android:text="@={viewModel.rs_500}"
@@ -222,6 +225,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
+                    android:digits="0123456789"
                     android:inputType="number"
                     android:maxLength="6"
                     android:text="@={viewModel.rs_2000}"
@@ -298,7 +302,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:visibility="gone"
-            app:layout_constraintTop_toBottomOf="@+id/button_withdrawl" />
+            app:layout_constraintTop_toBottomOf="@+id/button_withdral" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_last_transaction"
