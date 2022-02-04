@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kv.atmapplication.ui.add_money.AddMoneyViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.add_money.AddMoneyActivity">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:cardCornerRadius="@dimen/_3sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_atm_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/atm_amount"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tv_atm_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_atm_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/rs+viewModel.atmBalance.amount}"
+                    android:textAlignment="center"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/label_atm_amount"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_rs_100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/rs_100"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/label_rs_200"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/label_atm_amount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_rs_100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:text="@{viewModel.atmBalance.get100Text()}"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_100"
+                    app:layout_constraintStart_toStartOf="@id/label_rs_100"
+                    app:layout_constraintTop_toBottomOf="@id/label_rs_100"
+                    tools:text="100" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_rs_200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/rs_200"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toStartOf="@+id/label_rs_500"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/label_rs_100"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_atm_amount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_rs_200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:text="@{viewModel.atmBalance.get200Text()}"
+                    android:textColor="@color/semi_black"
+
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_200"
+                    app:layout_constraintStart_toStartOf="@id/label_rs_200"
+                    app:layout_constraintTop_toBottomOf="@id/label_rs_200"
+                    tools:text="50" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_rs_500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/rs_500"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toStartOf="@+id/label_rs_2000"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/label_rs_200"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_atm_amount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_rs_500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:text="@{viewModel.atmBalance.get500Text()}"
+                    android:textColor="@color/semi_black"
+
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_500"
+                    app:layout_constraintStart_toStartOf="@id/label_rs_500"
+                    app:layout_constraintTop_toBottomOf="@id/label_rs_500"
+                    tools:text="25" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_rs_2000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/rs_2000"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/label_rs_500"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_atm_amount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_rs_2000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:text="@{viewModel.atmBalance.get2000Text()}"
+                    android:textColor="@color/semi_black"
+
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_2000"
+                    app:layout_constraintStart_toStartOf="@id/label_rs_2000"
+                    app:layout_constraintTop_toBottomOf="@id/label_rs_2000"
+                    tools:text="10" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_rs_100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:text="@={viewModel.rs_100}"
+                    android:textAlignment="center"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_100"
+                    app:layout_constraintStart_toStartOf="@id/label_rs_100"
+                    app:layout_constraintTop_toBottomOf="@id/tv_rs_100"
+
+                    tools:text="75" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_rs_200"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:text="@={viewModel.rs_200}"
+                    android:textAlignment="center"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_200"
+                    app:layout_constraintStart_toStartOf="@id/label_rs_200"
+                    app:layout_constraintTop_toBottomOf="@id/tv_rs_200"
+
+                    tools:text="75" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_rs_500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:text="@={viewModel.rs_500}"
+                    android:textAlignment="center"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_500"
+                    app:layout_constraintStart_toStartOf="@id/label_rs_500"
+                    app:layout_constraintTop_toBottomOf="@id/tv_rs_500"
+
+                    tools:text="75" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_rs_2000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:text="@={viewModel.rs_2000}"
+                    android:textAlignment="center"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toEndOf="@id/label_rs_2000"
+                    app:layout_constraintStart_toStartOf="@id/label_rs_2000"
+                    app:layout_constraintTop_toBottomOf="@id/tv_rs_2000"
+
+                    tools:text="75" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_new_atm_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_atm_amount"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/tv_atm_amount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tiet_rs_100" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_new_atm_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/semi_black"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/label_atm_amount"
+                    app:layout_constraintTop_toBottomOf="@+id/tiet_rs_100" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_deposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:onClick="onClickDepositAtm"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/deposit_to_atm"
+            app:cornerRadius="@dimen/_20sdp"
+            app:elevation="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cv_amount" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_withdral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:onClick="onClickWithdrawl"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/withdrawl_from_atm"
+            app:cornerRadius="@dimen/_20sdp"
+            app:elevation="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/button_deposit" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/label_last_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/last_transactions"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/button_withdrawl" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_last_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/_3sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_last_transactions">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_last_atm_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/atm_amount"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_min="@dimen/_70sdp" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_last_rs_100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs_100"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/label_last_rs_200"
+                    app:layout_constraintStart_toEndOf="@+id/label_last_atm_amount"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_last_rs_200"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs_200"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toStartOf="@+id/label_last_rs_500"
+                    app:layout_constraintStart_toEndOf="@+id/label_last_rs_100"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_last_rs_500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs_500"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toStartOf="@+id/label_last_rs_2000"
+                    app:layout_constraintStart_toEndOf="@+id/label_last_rs_200"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_last_rs_2000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs_2000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/label_last_rs_500"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_last_atm_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Rs. 5000"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toBottomOf="@+id/label_last_atm_amount"
+                    app:layout_constraintWidth_min="@dimen/_70sdp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_last_rs_100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:text="75"
+                    android:textAlignment="center"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_last_rs_200"
+                    app:layout_constraintStart_toEndOf="@+id/tv_last_atm_amount"
+                    app:layout_constraintTop_toBottomOf="@+id/label_last_atm_amount" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_last_rs_200"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:text="50"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_last_rs_500"
+                    app:layout_constraintStart_toEndOf="@+id/tv_last_rs_100"
+                    app:layout_constraintTop_toBottomOf="@+id/label_last_atm_amount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_last_rs_500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:text="25"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_last_rs_2000"
+                    app:layout_constraintStart_toEndOf="@+id/tv_last_rs_200"
+                    app:layout_constraintTop_toBottomOf="@+id/label_last_atm_amount" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_last_rs_2000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="10"
+
+                    android:textAlignment="center"
+
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_last_rs_500"
+                    app:layout_constraintTop_toBottomOf="@+id/label_last_atm_amount" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/label_your_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/your_transactions"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/cv_last_transaction" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_your_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone"
+
+            app:cardCornerRadius="@dimen/_3sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_your_transactions">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_your_transactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_7sdp"
+                android:paddingVertical="@dimen/_7sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_your_atm_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/atm_amount"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_min="@dimen/_70sdp" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_your_rs_100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs_100"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/label_your_rs_200"
+                    app:layout_constraintStart_toEndOf="@+id/label_your_atm_amount"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_your_rs_200"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs_200"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toStartOf="@+id/label_your_rs_500"
+                    app:layout_constraintStart_toEndOf="@+id/label_your_rs_100"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_your_rs_500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs_500"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toStartOf="@+id/label_your_rs_2000"
+                    app:layout_constraintStart_toEndOf="@+id/label_your_rs_200"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/label_your_rs_2000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs_2000"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/label_your_rs_500"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_your_transactions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label_your_rs_2000"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/item_your_trans" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
