@@ -10,4 +10,4 @@ Cash withdrawl application
 ## Output
 
 ![](https://github.com/1211amarsingh/MyAtm/blob/master/doc/Screenshot1.jpg =100x20)
-[<img src="https://github.com/1211amarsingh/MyAtm/blob/master/doc/Screenshot1.jpg" width="250"/>](image.png)
+[<img src="https://github.com/1211amarsingh/MyAtm/blob/master/doc/Screenshot1.jpg" width="500"/>](image.png)
