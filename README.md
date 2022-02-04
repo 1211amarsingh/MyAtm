@@ -2,12 +2,12 @@
 Cash withdrawl application
 
 <h2>Features:</h2>
-✔ Kotlin ✔ MVVM ✔ Room Database ✔ Coroutine with Flow ✔ light weight and hassle free library<br>
-✔ select address<br>
-✔ save favourite address<br>
-✔ edit address<br>
+✔ Kotlin<br>
+✔ MVVM<br>
+✔ Room Database<br>
+✔ Coroutine with Flow<br>
 
 ## Output
 
-![](https://github.com/1211amarsingh/MyAtm/blob/maste/doc/blob/master/Screenshot1.jpg)
-![](https://github.com/1211amarsingh/MyAtm/blob/maste/doc/blob/master/Screenshot2.jpg)
+![](https://github.com/1211amarsingh/MyAtm/blob/master/doc/Screenshot1.jpg)
+![](https://github.com/1211amarsingh/MyAtm/blob/master/doc/Screenshot2.jpg)
